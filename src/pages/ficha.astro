@@ -1,0 +1,121 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Médica - Acceso Concedido</title>
+  <link rel="stylesheet" href="/styles/global.css">
+  <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body class="bg-background text-foreground min-h-screen flex items-center justify-center p-4">
+
+  <div class="w-full max-w-md">
+    <div class="bg-card rounded-2xl p-6 shadow-xl border border-border">
+      
+      <!-- Encabezado -->
+      <div class="text-center mb-6">
+        <div class="w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-primary/50 shadow-md">
+          <img src="/img/profile-placeholder.jpg" alt="Foto del titular" class="w-full h-full object-cover">
+        </div>
+        <h1 class="text-2xl font-bold mt-4">Juan Pérez</h1>
+        <p class="text-sm text-muted-foreground">Ficha médica registrada</p>
+        <p class="text-xs text-muted-foreground mt-1">Última actualización: 17/10/2025</p>
+      </div>
+
+      <!-- Información médica -->
+      <div class="bg-muted/50 rounded-lg p-4 mb-6">
+        <h2 class="text-lg font-semibold mb-3 text-primary">Información Médica</h2>
+        <ul class="text-sm space-y-2 text-muted-foreground">
+          <li><strong>Edad:</strong> 32 años</li>
+          <li><strong>Tipo de sangre:</strong> O+</li>
+          <li><strong>Alergias:</strong> Penicilina</li>
+          <li><strong>Padecimientos:</strong> Hipertensión</li>
+          <li><strong>Condiciones críticas:</strong> Diabetes tipo 2</li>
+          <li><strong>Medicación actual:</strong> Metformina 850 mg (2 veces al día)</li>
+          <li><strong>Indicaciones especiales:</strong> NO administrar insulina sin control médico</li>
+        </ul>
+      </div>
+
+     <!-- Contactos de emergencia -->
+<div class="bg-muted/50 rounded-lg p-4 mb-6">
+  <h2 class="text-lg font-semibold mb-3 text-primary">Contactos de Emergencia</h2>
+
+  <div class="space-y-4">
+    <div class="flex items-center justify-between text-sm">
+      <div>
+        <p class="font-medium">María López</p>
+        <p class="text-muted-foreground">Madre</p>
+      </div>
+      <div class="flex gap-2">
+        <a href="tel:+525512345678"
+           class="bg-primary text-primary-foreground px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary/90 transition">
+          Llamar
+        </a>
+        <a href="https://wa.me/525512345678"
+           target="_blank"
+           class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-green-700 transition">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between text-sm">
+      <div>
+        <p class="font-medium">Carlos Pérez</p>
+        <p class="text-muted-foreground">Hermano</p>
+      </div>
+      <div class="flex gap-2">
+        <a href="tel:+525576543210"
+           class="bg-primary text-primary-foreground px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary/90 transition">
+          Llamar
+        </a>
+        <a href="https://wa.me/525576543210"
+           target="_blank"
+           class="bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-green-700 transition">
+         <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Indicaciones de primeros auxilios -->
+       <div class="bg-muted/50 rounded-lg p-4 mb-6">
+  <h2 class="text-lg font-semibold mb-3 text-primary">Indicaciones de Emergencia</h2>
+  <ul class="list-disc list-inside text-sm text-muted-foreground space-y-2 text-left">
+    <li><strong>NO</strong> retires el casco del motociclista.</li>
+    <li><strong>NO</strong> lo muevas, a menos que haya peligro inmediato (fuego, explosión, etc.).</li>
+    <li>Verifica si respira y tiene pulso. Si no, llama al 911 y sigue las instrucciones del operador.</li>
+    <li>Evita que se formen aglomeraciones alrededor del herido.</li>
+    <li>Si hay sangrado visible, aplica presión suave con una tela limpia sin moverlo.</li>
+    <li>Mantén la calma. Quédate cerca, vigila sus signos vitales y espera a los servicios de emergencia.</li>
+    <li>Comparte la ficha medica con los paramedicos.</li>
+  </ul>
+  <p class="mt-4 text-xs text-muted-foreground italic">Tu serenidad puede marcar la diferencia. Actúa con cuidado y llama al 911.</p>
+</div>
+
+      <!-- Ubicación del siniestro -->
+      <div class="bg-muted/50 rounded-lg p-4 text-center">
+        <h2 class="text-lg font-semibold mb-2 text-primary">Ubicación del Siniestro</h2>
+        <p id="ubicacion" class="text-sm text-muted-foreground mb-3">
+          Obteniendo ubicación...
+        </p>
+        <button id="compartirUbicacion"
+                class="w-full bg-primary text-primary-foreground font-semibold py-3 rounded-lg hover:bg-primary/90 transition">
+          Compartir ubicación
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+<script src="/public/scripts/ubicacion.js" is:inline></script>
+
+</body>
+</html>

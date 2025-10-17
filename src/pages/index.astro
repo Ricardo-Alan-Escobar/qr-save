@@ -1,0 +1,79 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresa el código</title>
+  <link rel="stylesheet" href="/styles/global.css">
+</head>
+<body class="bg-background text-foreground min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-md">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold mb-5 text-balance">Ingresa el código</h1>
+      <div class="bg-card text-white text-sm px-4 py-3 rounded-2xl shadow-md border border-border">
+  Introduce el código numérico de 6 dígitos ubicado debajo de la salpicadera.
+</div>
+    </div>
+
+    <div class="bg-card rounded-2xl p-8  shadow-xl border border-border">
+      <!-- Campos de código -->
+      <div id="code-inputs" class="flex gap-2 justify-center mb-6">
+        <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" 
+               class="code-input w-12 h-14 text-center text-2xl font-bold bg-input border-2 border-border rounded-lg focus:border-primary focus:outline-none transition-colors" 
+               data-index="0">
+        <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" 
+               class="code-input w-12 h-14 text-center text-2xl font-bold bg-input border-2 border-border rounded-lg focus:border-primary focus:outline-none transition-colors" 
+               data-index="1">
+        <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" 
+               class="code-input w-12 h-14 text-center text-2xl font-bold bg-input border-2 border-border rounded-lg focus:border-primary focus:outline-none transition-colors" 
+               data-index="2">
+        <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" 
+               class="code-input w-12 h-14 text-center text-2xl font-bold bg-input border-2 border-border rounded-lg focus:border-primary focus:outline-none transition-colors" 
+               data-index="3">
+        <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" 
+               class="code-input w-12 h-14 text-center text-2xl font-bold bg-input border-2 border-border rounded-lg focus:border-primary focus:outline-none transition-colors" 
+               data-index="4">
+        <input type="text" maxlength="1" pattern="[0-9]" inputmode="numeric" 
+               class="code-input w-12 h-14 text-center text-2xl font-bold bg-input border-2 border-border rounded-lg focus:border-primary focus:outline-none transition-colors" 
+               data-index="5">
+      </div>
+
+      <!-- Mensaje de error -->
+      <div id="error-message" class="hidden text-destructive text-sm text-center mb-4 font-medium"></div>
+
+      <!-- Mensaje de bloqueo -->
+      <div id="lock-message" class="hidden text-warning text-sm text-center mb-4 font-medium"></div>
+
+      <!-- Indicador de intentos -->
+      <div class="text-center text-muted-foreground text-xs">
+        <span id="attempts-counter">Intentos restantes: 5</span>
+      </div>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="mt-6 text-center">
+  <p class="text-muted-foreground text-xs">
+    En caso de accidente, contacta a sus familiares y verifica la ficha médica.
+  </p>
+
+  <div class="mt-4">
+    <p class="text-muted-foreground text-xs mb-2">
+      Primero lo primero — si aún no llamaste a emergencias, hazlo ya.
+    </p>
+    <a
+      href="tel:911"
+      class="inline-block bg-red-600 hover:bg-red-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition"
+    >
+      Llamar al 911
+    </a>
+  </div>
+</div>
+
+  <script src="/scripts/code-verification.js" is:inline></script>
+
+</body>
+</html>
